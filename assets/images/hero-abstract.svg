@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Abstract cybersecurity illustration">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1">
+      <stop offset="0" stop-color="#071018"/>
+      <stop offset="1" stop-color="#00121a"/>
+    </linearGradient>
+    <linearGradient id="g1" x1="0" x2="1">
+      <stop offset="0" stop-color="#143a34"/>
+      <stop offset="1" stop-color="#0f6854"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <!-- network grid -->
+  <g stroke="#08393a" stroke-width="1">
+    {% for i in range(0,1600,80) %}
+    <line x1="{{i}}" y1="0" x2="{{i}}" y2="900" stroke-opacity="0.06"/>
+    {% endfor %}
+    {% for j in range(0,900,80) %}
+    <line x1="0" y1="{{j}}" x2="1600" y2="{{j}}" stroke-opacity="0.06"/>
+    {% endfor %}
+  </g>
+  <!-- browser window -->
+  <g transform="translate(200,120)">
+    <rect width="1200" height="600" rx="14" fill="#02131a" stroke="#06373a" stroke-width="2"/>
+    <rect x="24" y="20" width="1152" height="44" rx="8" fill="#031d22"/>
+    <!-- address bar -->
+    <rect x="60" y="28" width="900" height="28" rx="6" fill="#072a2b"/>
+    <!-- tabs -->
+    <g fill="#08292c" opacity="0.9">
+      <rect x="20" y="28" width="36" height="28" rx="6"/>
+      <rect x="1160" y="28" width="16" height="28" rx="6"/>
+    </g>
+    <!-- content: abstract lock + circuits -->
+    <g transform="translate(420,160)">
+      <rect width="240" height="240" rx="20" fill="url(#g1)" filter="url(#glow)"/>
+      <!-- lock -->
+      <rect x="86" y="100" width="68" height="60" rx="8" fill="#fff"/>
+      <path d="M120 100 v-24 a28 28 0 0 1 56 0 v24" fill="#fff" transform="translate(-28,-24)"/>
+      <circle cx="120" cy="130" r="6" fill="#0a3b34"/>
+    </g>
+    <!-- circuit nodes -->
+    <g stroke="#0a6b5e" stroke-width="2" stroke-linecap="round">
+      <line x1="320" y1="200" x2="520" y2="320" />
+      <circle cx="320" cy="200" r="6" fill="#0a6b5e"/>
+      <circle cx="520" cy="320" r="6" fill="#0a6b5e"/>
+      <line x1="520" y1="320" x2="760" y2="240" />
+      <circle cx="760" cy="240" r="6" fill="#0a6b5e"/>
+    </g>
+  </g>
+  <!-- subtle rook silhouette overlay -->
+  <g transform="translate(1000,40) scale(1.1)" opacity="0.08">
+    <path d="M60 10 C40 10, 10 35, 10 60 C10 85, 40 110, 80 110 C120 110, 150 85, 150 60 C150 35, 120 10, 100 10 C90 10, 80 18, 70 18 C65 18, 62 12, 60 10 Z" fill="#0f3b33"/>
+  </g>
+</svg>

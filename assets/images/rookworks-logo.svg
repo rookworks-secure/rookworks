@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="120" viewBox="0 0 480 120" role="img" aria-label="RookWorks logo">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#2f8b75"/>
+      <stop offset="1" stop-color="#1f6b55"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="120" rx="8" fill="transparent"/>
+  <!-- stylized rook bird head + beak -->
+  <g transform="translate(20,12) scale(0.8)">
+    <path d="M60 10 C40 10, 10 35, 10 60 C10 85, 40 110, 80 110 C120 110, 150 85, 150 60 C150 35, 120 10, 100 10 C90 10, 80 18, 70 18 C65 18, 62 12, 60 10 Z" fill="url(#g)"/>
+    <!-- beak -->
+    <path d="M150 60 L185 50 L170 70 Z" fill="#f4c542"/>
+    <!-- eye -->
+    <circle cx="95" cy="55" r="6" fill="#071018"/>
+    <!-- subtle wing -->
+    <path d="M60 70 C85 75, 110 75, 130 60" stroke="#0b2f2a" stroke-width="6" fill="none" stroke-linecap="round"/>
+  </g>
+  <text x="220" y="78" font-family="Inter, system-ui, sans-serif" font-size="36" fill="#eaeaea" font-weight="700">RookWorks</text>
+</svg>
